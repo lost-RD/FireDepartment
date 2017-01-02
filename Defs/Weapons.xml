@@ -37,14 +37,20 @@
 
 	<ThingDef Name="BaseHumanGun" ParentName="BaseGun" Abstract="True">
 		<weaponTags>
-			<li>Gun</li>
+			<li>FirefighterTool</li>
 		</weaponTags>
+		<tradeTags>
+			<li>Exotic</li>
+		</tradeTags>
 	</ThingDef>
 	
 	<ThingDef Name="BaseHumanMakeableGun" ParentName="BaseMakeableGun" Abstract="True">
 		<weaponTags>
-			<li>Gun</li>
+			<li>CraftableFirefighterTool</li>
 		</weaponTags>
+		<researchPrerequisites>
+			<li>Firefoam</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<ThingDef Name="BaseBullet" Abstract="True">
@@ -122,12 +128,6 @@
 		</costList>
 		<techLevel>Spacer</techLevel>
 		<destroyOnDrop>false</destroyOnDrop>
-		<weaponTags>
-			<li>GunHeavy</li>
-		</weaponTags>
-		<tradeTags>
-			<li>Exotic</li>
-		</tradeTags>
 		<verbs>
 			<li>
 				<verbClass>Verb_ShootOneUse</verbClass>
@@ -146,9 +146,6 @@
 				<muzzleFlashScale>14</muzzleFlashScale>
 			</li>
 		</verbs>
-		<researchPrerequisites>
-			<li>Firefoam</li>
-		</researchPrerequisites>
 	</ThingDef>
 
 <!-- ====================== Firefoam grenade ============================ -->
@@ -195,9 +192,6 @@
 		<thingCategories>
 			<li>Grenades</li>
 		</thingCategories>
-		<tradeTags>
-			<li>Exotic</li>
-		</tradeTags>
 		<verbs>
 			<li>
 				<label>throw firefoam grenade</label>
@@ -215,9 +209,6 @@
 				<projectileDef>Proj_GrenadeExtinguisher</projectileDef>
 			</li>
 		</verbs>
-		<researchPrerequisites>
-			<li>Firefoam</li>
-		</researchPrerequisites>
 	</ThingDef>
 	
 <!-- ==================== T-9 incendiary launcher ========================== -->
@@ -281,12 +272,6 @@
 				</targetParams>
 			</li>
 		</verbs>
-		<tradeTags>
-			<li>Exotic</li>
-		</tradeTags>
-		<researchPrerequisites>
-			<li>Firefoam</li>
-		</researchPrerequisites>
 	</ThingDef>
 
 	
