@@ -52,8 +52,15 @@
 			<li>Firefoam</li>
 		</researchPrerequisites>
 	</ThingDef>
-
-	<ThingDef Name="BaseBullet" Abstract="True">
+	
+	<ThingDef Name="BaseProjectile" Abstract="True">
+		<projectile>
+			<damageDef>UnchangedExtinguish</damageDef>
+			<preExplosionSpawnThingDef>FilthFireFoam</preExplosionSpawnThingDef>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef Name="BaseBullet" ParentName="BaseProjectile" Abstract="True">
 		<category>Projectile</category>
 		<tickerType>Normal</tickerType>
 		<altitudeLayer>Projectile</altitudeLayer>
@@ -66,7 +73,7 @@
 		</graphicData>
 	</ThingDef>
 	
-	<ThingDef Name="BaseGrenadeProjectile" Abstract="True">
+	<ThingDef Name="BaseGrenadeProjectile" ParentName="BaseProjectile" Abstract="True">
 		<category>Projectile</category>
 		<altitudeLayer>Projectile</altitudeLayer>
 		<thingClass>Projectile_Explosive</thingClass>
@@ -80,6 +87,8 @@
 		<projectile>
 			<speed>12</speed>
 			<flyOverhead>false</flyOverhead>
+			<damageDef>UnchangedExtinguish</damageDef>
+			<preExplosionSpawnThingDef>FilthFireFoam</preExplosionSpawnThingDef>
 		</projectile>
 	</ThingDef>
 
@@ -95,11 +104,9 @@
 		</graphicData>
 		<thingClass>Projectile_Explosive</thingClass>
 		<projectile>
-			<explosionRadius>9.9</explosionRadius >
-			<damageDef>Extinguish</damageDef>
+			<explosionRadius>9.9</explosionRadius>
 			<damageAmountBase>1000</damageAmountBase>
 			<explosionDelay>20</explosionDelay>
-			<preExplosionSpawnThingDef>FilthFireFoam</preExplosionSpawnThingDef>
 			<speed>50</speed>
 		</projectile>
 	</ThingDef>
@@ -141,7 +148,7 @@
 				<soundCastTail>GunTail_Medium</soundCastTail>
 				<onlyManualCast>true</onlyManualCast>
 				<targetParams>
-				<canTargetLocations>true</canTargetLocations>
+					<canTargetLocations>true</canTargetLocations>
 				</targetParams>
 				<muzzleFlashScale>14</muzzleFlashScale>
 			</li>
@@ -160,11 +167,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<projectile>
-			<explosionRadius>5.5</explosionRadius >
-			<damageDef>Extinguish</damageDef>
+			<explosionRadius>5.5</explosionRadius>
 			<damageAmountBase>40</damageAmountBase>
 			<explosionDelay>100</explosionDelay>
-			<preExplosionSpawnThingDef>FilthFireFoam</preExplosionSpawnThingDef>
 		</projectile>
 	</ThingDef>
 
@@ -224,10 +229,8 @@
 		<thingClass>Projectile_Explosive</thingClass>
 		<projectile>
 			<speed>40</speed>
-			<damageDef>Extinguish</damageDef>
 			<damageAmountBase>10</damageAmountBase>
 			<explosionRadius>2.1</explosionRadius>
-			<preExplosionSpawnThingDef>FilthFireFoam</preExplosionSpawnThingDef>
 			<explosionSpawnChance>0.5</explosionSpawnChance>
 			<soundExplode>Extinguisher</soundExplode>
 		</projectile>

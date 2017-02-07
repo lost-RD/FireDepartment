@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DamageDef>
+    <defName>FirefoamExtinguish</defName>
+    <label>extinguish</label>
+    <workerClass>DamageWorker_Extinguish</workerClass>
+    <canInterruptJobs>false</canInterruptJobs>
+    <makesBlood>false</makesBlood>
+    <explosionDamage>999999</explosionDamage>
+    <explosionCellMote>Mote_BlastExtinguisher</explosionCellMote>
+    <explosionColorCenter>(1, 0, 0, 0.05)</explosionColorCenter>
+    <explosionColorEdge>(1, 0, 0, 0.05)</explosionColorEdge>
+    <soundExplosion>Explosion_Stun</soundExplosion>
+  </DamageDef>
+
+  <DamageDef>
+    <defName>UnchangedExtinguish</defName>
+    <label>extinguish</label>
+    <workerClass>DamageWorker_Extinguish</workerClass>
+    <canInterruptJobs>false</canInterruptJobs>
+    <makesBlood>false</makesBlood>
+    <explosionDamage>999999</explosionDamage>
+    <explosionCellMote>Mote_BlastExtinguisher</explosionCellMote>
+    <explosionColorEdge>(1, 1, 1, 0.05)</explosionColorEdge>
+    <soundExplosion>Explosion_Stun</soundExplosion>
+  </DamageDef>
+  
+</Defs>
